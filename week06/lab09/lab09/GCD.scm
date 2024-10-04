@@ -1,0 +1,7 @@
+(define (max a b) (if (> a b) a b))
+(define (min a b) (if (> a b) b a))
+(define (gcd a b)
+  (define tmp (modulo (max a b) (min a b)))
+  (cond ((= tmp 0)  (min a b))
+    (else (gcd (min a b ) tmp )))
+)
